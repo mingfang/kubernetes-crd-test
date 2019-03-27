@@ -1,5 +1,5 @@
 # kubernetes-crd-test
-To test various Kubernetes CRD configurations
+To test various Kubernetes CRD configurations.
 
 ## Requirements to run the tests
 - Kubernetes v1.14 with ```--feature-gates=CustomResourcePublishOpenAPI=true``` as documented here https://kubernetes.io/docs/tasks/access-kubernetes-api/custom-resources/custom-resource-definitions/#publish-validation-schema-in-openapi-v2
@@ -79,7 +79,7 @@ spec:
               maximum: 10
 ```
 ```sh
-sh -x test.sh crontab-crd-non-object-spec.yaml
+>sh -x test.sh crontab-crd-non-object-spec.yaml
 + kubectl delete crontabs --all --ignore-not-found=true
 No resources found
 + kubectl delete crd crontabs.stable.example.com --ignore-not-found=true
@@ -188,7 +188,7 @@ spec:
               maximum: 10
 ```
 ```sh
-sh -x test.sh crontab-crd-object-spec.yaml
+>sh -x test.sh crontab-crd-object-spec.yaml
 + kubectl delete crontabs --all --ignore-not-found=true
 No resources found
 + kubectl delete crd crontabs.stable.example.com --ignore-not-found=true
